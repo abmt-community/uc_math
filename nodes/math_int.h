@@ -82,7 +82,7 @@ public:
 	int32_t param_Tms = 1000;
 	int32_t param_initial_value;
 	
-	int64_t mem;
+	int32_t mem;
 	int32_t dt_divT;
 	abmt::time raster_interval;
 

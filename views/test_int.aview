@@ -12,20 +12,20 @@
       "time_range": 10,
       "y_max": "auto",
       "y_min": "auto",
-      "width": 1520,
+      "width": 1517,
       "height": 150
     },
     {
       "signals": [
-        "pt1_int_1.out",
+        "pt1_int.out",
         "pt1.out",
-        "pt1_int.out"
+        "pt1_int.in"
       ],
       "type": "scope",
       "time_range": 10,
       "y_max": "auto",
       "y_min": "auto",
-      "width": 1520,
+      "width": 1517,
       "height": 150
     },
     {
@@ -33,7 +33,7 @@
       "display_name": true,
       "num_digets": "3",
       "signal": "max_int.out",
-      "width": 1520,
+      "width": 1517,
       "height": 25
     },
     {
@@ -41,7 +41,7 @@
       "display_name": true,
       "num_digets": "3",
       "signal": "min_int.out",
-      "width": 1520,
+      "width": 1517,
       "height": 25
     },
     {
@@ -54,10 +54,10 @@
       "time_range": 10,
       "y_max": "auto",
       "y_min": "auto",
-      "width": 1520,
+      "width": 1517,
       "height": 150
     }
   ],
-  "width": 1520,
+  "width": 1517,
   "height": 852
 }

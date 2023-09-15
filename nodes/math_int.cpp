@@ -104,7 +104,7 @@ void ma_filter_int::init(){
         init_val = in;
     }
     for(int i = 0; i < param_size; ++i){
-        data[i] = init_val/param_size;
+        data[i] = init_val;
     }
     pos = 0;
     sum = init_val*param_size;
