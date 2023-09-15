@@ -6,6 +6,7 @@
 #include "math_float.h"
 #include <abmt/os.h>
 #include <math.h>
+#include <float.h>
 
 using namespace std;
 using namespace uc_math;
@@ -151,7 +152,7 @@ void dt_float::tick(){
 }
 
 void min_float::init(){
-    out =std::numeric_limits<float>::max();
+    out = -FLT_MAX;
 }
 
 void min_float::tick(){
@@ -164,7 +165,7 @@ void min_float::tick(){
 }
 
 void max_float::init(){
-    out = std::numeric_limits<float>::lowest();
+    out = -FLT_MAX;
 }
 
 void max_float::tick(){

@@ -127,7 +127,7 @@ void ma_filter_int::final(){
 }
 
 void min_int::init(){
-    out =std::numeric_limits<int32_t>::max();
+    out = INT32_MAX;
 }
 
 void min_int::tick(){
@@ -140,7 +140,7 @@ void min_int::tick(){
 }
 
 void max_int::init(){
-    out = std::numeric_limits<int32_t>::lowest();
+    out = INT32_MIN;
 }
 
 void max_int::tick(){
