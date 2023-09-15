@@ -1,0 +1,63 @@
+{
+  "type": "list",
+  "elements": [
+    {
+      "signals": [
+        "counter_int.out",
+        "pt2_int.out",
+        "pt2_float.out",
+        "pt1.out"
+      ],
+      "type": "scope",
+      "time_range": 10,
+      "y_max": "auto",
+      "y_min": "auto",
+      "width": 1520,
+      "height": 150
+    },
+    {
+      "signals": [
+        "pt1_int_1.out",
+        "pt1.out",
+        "pt1_int.out"
+      ],
+      "type": "scope",
+      "time_range": 10,
+      "y_max": "auto",
+      "y_min": "auto",
+      "width": 1520,
+      "height": 150
+    },
+    {
+      "type": "display",
+      "display_name": true,
+      "num_digets": "3",
+      "signal": "max_int.out",
+      "width": 1520,
+      "height": 25
+    },
+    {
+      "type": "display",
+      "display_name": true,
+      "num_digets": "3",
+      "signal": "min_int.out",
+      "width": 1520,
+      "height": 25
+    },
+    {
+      "signals": [
+        "ma_filter_int.out",
+        "ma_filter_float.out",
+        "counter_int.out"
+      ],
+      "type": "scope",
+      "time_range": 10,
+      "y_max": "auto",
+      "y_min": "auto",
+      "width": 1520,
+      "height": 150
+    }
+  ],
+  "width": 1520,
+  "height": 852
+}

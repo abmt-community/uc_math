@@ -1,0 +1,252 @@
+{
+  "model_is_node": false,
+  "nodes": [
+    {
+      "name": "counter_int",
+      "type": "class",
+      "cfg": {
+        "class": "counter_int",
+        "prj": "uc_math",
+        "start": "0",
+        "end": "1024",
+        "step": "1",
+        "auto_restart": true
+      },
+      "pos": {
+        "x": -302,
+        "y": -70
+      },
+      "rotate": false,
+      "comment_out": false,
+      "raster": "10ms"
+    },
+    {
+      "name": "pt2_int",
+      "type": "class",
+      "cfg": {
+        "class": "pt2_int",
+        "prj": "uc_math",
+        "t": "1",
+        "d": "1",
+        "init_with_first_input": true,
+        "initial_value": "0",
+        "initial_value_derivative": "0"
+      },
+      "pos": {
+        "x": 88,
+        "y": -70
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0"
+      }
+    },
+    {
+      "name": "pt1_int",
+      "type": "class",
+      "cfg": {
+        "class": "pt1_int",
+        "prj": "uc_math",
+        "Tms": "1000",
+        "initial_value": "{}"
+      },
+      "pos": {
+        "x": 102,
+        "y": -200
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": ""
+      }
+    },
+    {
+      "name": "derive_int",
+      "type": "class",
+      "cfg": {
+        "class": "derive_int",
+        "prj": "uc_math"
+      },
+      "pos": {
+        "x": 78,
+        "y": 250
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": ""
+      }
+    },
+    {
+      "name": "integrate_int",
+      "type": "class",
+      "cfg": {
+        "class": "integrate_int",
+        "prj": "uc_math",
+        "initial_value": "0",
+        "min": "-727379967",
+        "max": "727379967"
+      },
+      "pos": {
+        "x": 506,
+        "y": 243
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "derive_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0",
+        "reset": "false"
+      }
+    },
+    {
+      "name": "limit_int",
+      "type": "class",
+      "cfg": {
+        "class": "limit_int",
+        "prj": "uc_math",
+        "min": "100",
+        "max": "900"
+      },
+      "pos": {
+        "x": 71,
+        "y": 366
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0"
+      }
+    },
+    {
+      "name": "max_int",
+      "type": "class",
+      "cfg": {
+        "class": "max_int",
+        "prj": "uc_math"
+      },
+      "pos": {
+        "x": 534,
+        "y": 370
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "limit_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0",
+        "reset": "false"
+      }
+    },
+    {
+      "name": "min_int",
+      "type": "class",
+      "cfg": {
+        "class": "min_int",
+        "prj": "uc_math"
+      },
+      "pos": {
+        "x": 549,
+        "y": 543
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "limit_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0",
+        "reset": "false"
+      }
+    },
+    {
+      "name": "ma_filter_int",
+      "type": "class",
+      "cfg": {
+        "class": "ma_filter_int",
+        "prj": "uc_math",
+        "size": "32",
+        "init_with_first_input": true,
+        "initial_value": "0"
+      },
+      "pos": {
+        "x": 79,
+        "y": 38
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0"
+      }
+    },
+    {
+      "name": "ma_filter_float",
+      "type": "class",
+      "cfg": {
+        "class": "ma_filter_float",
+        "prj": "uc_math",
+        "size": "32",
+        "init_with_first_input": true,
+        "initial_value": "0"
+      },
+      "pos": {
+        "x": 73,
+        "y": 143
+      },
+      "rotate": false,
+      "comment_out": false,
+      "inputs": {
+        "in": {
+          "node": "counter_int",
+          "pin": "out"
+        }
+      },
+      "default_values": {
+        "in": "0"
+      }
+    }
+  ]
+}

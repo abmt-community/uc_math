@@ -1,0 +1,6 @@
+{
+  "model": "test_int",
+  "runtime": "live",
+  "runtime_configs": {
+  }
+}
